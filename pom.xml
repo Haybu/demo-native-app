@@ -69,13 +69,13 @@
 						<cleanCache>true</cleanCache>
 					</image>
 				</configuration>
-				<executions>
+			<!--	<executions>
 					<execution>
 						<goals>
 							<goal>build-image</goal>
 						</goals>
 					</execution>
-				</executions>
+				</executions>-->
 			</plugin>
 		</plugins>
 	</build>
