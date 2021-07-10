@@ -1,4 +1,4 @@
-package io.agilehandy.demonativeapp.customer;
+package io.agilehandy.app.customer;
 
 import org.springframework.data.annotation.Id;
 
