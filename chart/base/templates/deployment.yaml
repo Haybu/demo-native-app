@@ -48,11 +48,11 @@ spec:
               protocol: TCP
           livenessProbe:
             httpGet:
-              path: /
+              path: {{ .Values.image.liveness }}
               port: http
           readinessProbe:
             httpGet:
-              path: /
+              path: {{ .Values.image.readiness }}
               port: http
           env:
             - name: INGRESS_HOST
