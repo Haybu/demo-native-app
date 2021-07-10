@@ -1,6 +1,6 @@
 # To build the project using docker with multi-stage build
 
-FROM openjdk:8-jdk-alpine as build
+FROM adoptopenjdk/openjdk11 as build
 WORKDIR /workspace/app
 
 COPY mvnw .
@@ -11,7 +11,7 @@ COPY src src
 RUN ./mvnw install -DskipTests
 RUN mkdir -p target/dependency && (cd target/dependency; jar -xf ../*.jar)
 
-FROM openjdk:8-jdk-alpine
+FROM openjdk:11-jre-slim-buster
 VOLUME /tmp
 ARG DEPENDENCY=/workspace/app/target/dependency
 COPY --from=build ${DEPENDENCY}/BOOT-INF/lib /app/lib
