@@ -4,14 +4,14 @@ This demo illustrates deploying a Spring Boot application in RH OpenShift contai
 using Tekton pipeline. The helm chart is included to perform
 the deployment.
 
-## Demo functions
+### Demo functions
 This sample demonstrates a simple example of adding, deleting 
 and listing customers from an in-memory H2 database 
 via API endpoint. For example, using Httpie, you can do the following:
 * `http http://localhost:8080/customers` to list customers (id and a name)
 * `http POST http://localhost:8080/customers/Sam` to add a customer with a name `Sam`
 
-## Deployment Steps
+### Deployment Steps
 * Push this application to a remote repository that your cluster can reach (GitHub, local Gogs, etc.)
 * Login to your cluster `icc <cluster name>`    
   ```If ICC doesn't work for you open the OpenShift Web Console and login via "Copy Login Command"```
