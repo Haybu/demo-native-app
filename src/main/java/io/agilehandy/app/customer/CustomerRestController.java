@@ -24,7 +24,7 @@ public class CustomerRestController {
         return repository.save(customer);
     }
 
-    @PutMapping("/customers/{id}")
+    @DeleteMapping("/customers/{id}")
     public Mono<Void> deleteCustomer(@PathVariable Integer id) {
         repository.deleteById(id);
         return Mono.empty();
